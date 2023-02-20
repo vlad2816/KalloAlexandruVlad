@@ -5,3 +5,7 @@
 --Putem interactiona cu codul altor oameni. (colaborare)
 --github (server) la care orice om care are git poate sa se conecteze.
 --git init (repozitoriu creat. )
+
+
+--Trebuie sa revezi anumite chestii.
+
