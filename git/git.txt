@@ -1,0 +1,7 @@
+# Notite github.
+
+--Retine in memorie blocuri ca un fel de back up. In caz ca ai facut anumite modificari si vrei sa revii la ele.
+
+--Putem interactiona cu codul altor oameni. (colaborare)
+--github (server) la care orice om care are git poate sa se conecteze.
+--git init (repozitoriu creat. )
