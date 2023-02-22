@@ -1,0 +1,56 @@
+
+
+    Structuri de date.
+
+
+-built in-putem scrie noi propriile structuri de date.
+
+-lista este mutabila  se pot modifica dupa ce sunt definite. 
+
+-in comparatie cu tuple unde este imutabil nu poti face schimbari odata definita.
+
+-str = colectie de caractere, imutabil, cum este definit asa ramane.
+
+-set = obiecte unice mutabile, sterse , adaugat elemente noi etc. 
+
+-dict = vector asociativ = colectie neordonata accesibile prin cheie.
+
+Care sunt structurile de date imutabile din python intrebare interviu- Tuple si str
+
+Lista =-------------------
+
+O definim cu un nume (variabila) = [''Vlad'', "Mihai", "adi" ]
+
+Operatiuni pe liste :
+
+#CRUD 
+
+#Adresa din lista = [0, 1, ,2 ,3 ,4 ,-1]
+
+-- list.append(x) adauga in lista. (list4.append si exercitiu_lista)
+
+--list.remove(x) sterge din lista 'x' (mai_multe_functii_liste.py)
+--list.count(x) numara pe ce index este 'x' (mai_multe_functii_liste.py)
+--list.reverse() Intoarce toata lista de la dreapta la stanga (inverseaza ordinea din lista)
+--min(list) valoare minima din lista  
+--max(list) valoare mare din lista
+--len(list) lungimea listei. 
+
+
+**-- Invata algoritmi de sortare in weekend. selection sort, binary sort etc.
+
+Functia sorted = return list, o noua lista cu lista pusa in ordine.
+
+Exercitiu : capetele si ce e inainte de capete
+
+Pentru a trece pe randul urmator fara sa intrerupa codul dai pe \ Enter
+
+
+
+matrix = []
+
+
+
+
+
+
