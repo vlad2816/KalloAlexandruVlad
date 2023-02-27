@@ -1,0 +1,8 @@
+set = mutabila = lista
+*elemente unice se elimina duplicatele 
+ordonate automat in memorie 
+se pune intre {}
+sau = set()
+
+ordinea setului difera de la compilare la compilare. 
+
