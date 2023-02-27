@@ -1,0 +1,3 @@
+Tuple= Imutabile- tuple si string.
+Tuplele sunt liste constante. Nu se pot modifica
+Se pot marca tuplele cu () sau fara dar sa fie separate prin ","
