@@ -1,0 +1,1 @@
+structura de date = colectie de key: valori 
