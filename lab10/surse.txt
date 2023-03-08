@@ -1,0 +1,4 @@
+Cea mai buna sursa =  realpython.com (****)
+* python course.eu (Shallow and deep copy)
+* w3schools.com
+* exercism.org 
