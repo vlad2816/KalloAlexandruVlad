@@ -5,4 +5,6 @@
 
 lista = ['mere', 'pere', 'castraveti', 'rosii', 'struguri']
 
-print([{k, v} for k, v in enumerate(lista)])
+
+for i in enumerate(lista):
+    print({i[1]}, {i[0]})
