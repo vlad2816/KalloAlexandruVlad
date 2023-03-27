@@ -1,0 +1,29 @@
+OOP:
+
+    1 = Abstractizare
+    2 = Incapsulare
+    3 = Polimorfismul
+    4 = Mostenirea
+
+1   Abstractizare = Inseamna sa ascundem detaliile de functionare a unui obiect si sa punem 
+    la dispozitie doar interfete simple.
+    Cand faci o poza apesi pe un buton nu trebuie sa sti tot procesul din spate.
+
+2   Incapsulare = Obiectele nu isi pot schimba starea interna a altor obiecte in mod direct 
+    (doar prin metode puse la dispozitie de obiectul respectiv.)
+    Exista niste reguli, nu poti sa faci anumite modificari daca nu respecta regulile (procesul respectiv.)
+
+3   Mostenirea = Generalizarea unor metode care sunt comune (ierarhie) Mamifere = Pisica-Caine
+    Au chestii in comun, atribute in comun. 
+
+4   Polimorfismul = Strans legat de mostenire, abilitate de procesare a obiectelor in functie de tipul sau clasa lor
+    Exemplu :  Clasa figura, metoda arie, dreptunghi cerc se incadreaza in metoda arie si clasa figura iar arie contine 
+    2 formule diferite pentru ambele.
+    
+
+
+Clase vs obiecte!!!!!!!!!!!!!!!!!!!!!!
+
+Clasa = Cod pe care il scriem este planul casei, obiectul este chestiile din casa, scaune, mese, canapea etc.
+Clasa = matrita unei masini => cream mai multe masini din acea matrita
+

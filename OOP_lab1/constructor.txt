@@ -1,0 +1,6 @@
+Constructor-destructor
+
+Constructor   --Metoda speciala apelata automat pentru fiecare obiect nou creat(instantiat).
+Rolul de a seta valori initiale pentru atributele obiectului.
+
+Destructor metoda speciala care este apelata 
