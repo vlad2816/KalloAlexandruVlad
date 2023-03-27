@@ -5,7 +5,7 @@ class Car:
         self.__cmc = 0
         self.__door = 4
         self.__tank_capacity = 45
-        self.__gas_in_tank = 0
+        self.__gas_in_tank = 15
         self.__passengers = []  # attribute private cu __
 
     def start_engine(self):
