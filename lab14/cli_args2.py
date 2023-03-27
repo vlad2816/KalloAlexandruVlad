@@ -3,7 +3,7 @@ import argparse
 
 argparser = argparse.ArgumentParser()
 argparser.add_argument("symbol", type=str)
-argparser.add_argument("sep", type=str, help='Increase a string')
+argparser.add_argument("sep", type=str, help='Add a string ')
 argparser.add_argument("multiplier", type=int)
 argparser.add_argument('-v', action='store_true')
 args = argparser.parse_args()
