@@ -1,4 +1,5 @@
 class Car:
+    """Representation of a virtual car."""
 
     def __init__(self):  # constructor
         self.__cmc = 0
