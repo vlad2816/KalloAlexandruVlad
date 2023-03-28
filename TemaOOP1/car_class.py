@@ -21,16 +21,19 @@ class Car:
         """Get current gas level in tank."""
         return self.gas_in_tank / self.tank_capacity * 100
 
-    def get_gas_per_km(self):
+    def get_gas_per_km(self, ):
         """Gas consumption per km """
         return (self.cmc) / 1000 * 4
 
     def distance(self):
-        if self.km_to_travel < self.get_gas_per_km * self.gas_in_tank:
-            raise ValueError('We dont have enough gas')
+        """Checking if i can reach the destination"""
+        if self.km_to_travel < self.cmc / 1000 * 4 * self.gas_in_tank:
+            print(f'{self.car_name} does not have enough gas')
+        else:
+            print(f'{self.car_name} Is running to destination. ')
 
 
-vw = Car('vw', 3000, 45, 10, False, 200)
+vw = Car('vw', 3000, 45, 10, False, 20000)
 
 print(vw.turn_on())
 print(vw.get_gas_percentage())
