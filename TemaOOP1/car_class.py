@@ -1,7 +1,7 @@
 class Car:
     """Representation of a virtual car."""
 
-    def __init__(self, car_name, cmc, tank_capacity, gas_in_tank, engine_running, km_to_travel):
+    def __init__(self, car_name, cmc, tank_capacity, gas_in_tank, engine_running, km_to_travel,):
         self.car_name = car_name
         self.cmc = cmc
         self.tank_capacity = tank_capacity
