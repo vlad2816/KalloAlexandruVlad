@@ -1,4 +1,4 @@
-
+from random import shuffle
 CARD_SYMBOLS = ['♠', '♥', '♦', '♣']
 CARD_VALUE_MAP = {
     '2': 2,
@@ -80,8 +80,27 @@ class Deck:
     def __init__(self) -> None:
         self.__cards = []
 
+        for i in CARD_SYMBOLS:
+            for key in CARD_VALUE_MAP:
+                self.__cards.append((key) + 'of' + i)
+
     def __len__(self):  # return int sau float
         return len(self.__cards)
+
+    def get_cards(self, n):
+        """Return n cards."""
+        if len(self.__cards) == 0:
+            return 'No cards can be popped'
+        else:
+            card_pop = self.__cards.pop()
+            return card_pop
+
+    def shuffle(self):
+        if len(self.__cards) < 52:
+            print("cannot shuffle the cards")
+        else:
+            shuffle(self.__cards)
+            return self.__cards
 
 
 d1 = Deck()
@@ -89,6 +108,7 @@ d1 = Deck()
 c1 = Card('2', CARD_SYMBOLS[0])
 c2 = Card('2', CARD_SYMBOLS[1])
 print(c1 == c2)
+print()
 
 
 print(f'Carti in pachet: {len(d1)}')
