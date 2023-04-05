@@ -1,0 +1,3 @@
+Properties = Python -> Cum vrei sa arate output dupa te gandesti cum face input. (getter)
+Acasa = python setter
+

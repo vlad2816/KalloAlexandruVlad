@@ -1,4 +1,7 @@
 from random import shuffle
+from typing import List
+
+
 CARD_SYMBOLS = ['♠', '♥', '♦', '♣']
 CARD_VALUE_MAP = {
     '2': 2,
@@ -29,6 +32,14 @@ class Card:
         self.__symbol = symbol
         self.__number = number
 
+    @property
+    def symbol(self):
+        return self.__symbol
+
+    @property
+    def number(self):
+        return self.__number
+
     def __str__(self) -> str:
         # apelat cand dam print pe un obiect REturn string
         return f'<{self.__number} {self.__symbol}>'
@@ -36,31 +47,24 @@ class Card:
     def __repr__(self) -> str:
         return self.__str__()  # vrem sa vedem object in interpretor Return string
 
-    def get_number(self) -> int:
+    def get_value(self) -> int:
         return CARD_VALUE_MAP[self.__number]
 
-    def get_symbol(self) -> str:
-        return self.__symbol
-    # __lt__ <
-    # __le__<=
-    # __gt__ >
-    # __ge__  >=
-
     def __lt__(self, other) -> int:
-        return self.get_number() < other.get_number()
+        return self.get_value() < other.get_number()
 
     def __le__(self, other) -> int:
-        return self.get_number() <= other.get_number()
+        return self.get_value() <= other.get_number()
 
     def __gt__(self, other) -> int:
-        return self.get_number() > other.get_number()
+        return self.get_value() > other.get_number()
 
     def __ge__(self, other) -> int:
-        return self.get_number() >= other.get_number()
+        return self.get_value() >= other.get_number()
 
     def __add__(self, other) -> int:
         # return acelasi tip, dar un obiect nou.
-        return self.get_number() + other.get_number()
+        return self.get_value() + other.get_number()
 
     def __eq__(self, other) -> int:  # operator overloading
         # Returneaza boolean
@@ -69,7 +73,11 @@ class Card:
         #         return True
         # return False
         # and self.__symbol == other.get_symbol()
-        return self.get_number() == other.get_number()
+        return self.get_value() == other.get_number()
+
+    # def __del__(self):
+    #     """Destructor"""
+    #     print('The card was deleted from the memory')
 
 
 class Deck:
@@ -81,34 +89,34 @@ class Deck:
         self.__cards = []
 
         for i in CARD_SYMBOLS:
-            for key in CARD_VALUE_MAP:
-                self.__cards.append((key) + 'of' + i)
+            for number in CARD_VALUE_MAP:
+                # card(valorile din for) cream un object
+                self.__cards.append((Card(number, i)))
 
     def __len__(self):  # return int sau float
         return len(self.__cards)
 
-    def get_cards(self, n):
+    def get_cards(self, n) -> List[Card]:
         """Return n cards."""
-        if len(self.__cards) == 0:
-            return 'No cards can be popped'
-        else:
-            card_pop = self.__cards.pop()
-            return card_pop
+        my_cards = []
+        if n > len(self.__cards):
+            raise ValueError('Cards cant be popped ')
+        for i in range(n):
+            my_cards.append(self.__cards.pop())
+        return my_cards
 
     def shuffle(self):
-        if len(self.__cards) < 52:
-            print("cannot shuffle the cards")
-        else:
-            shuffle(self.__cards)
-            return self.__cards
+        shuffle(self.__cards)
+        return self.__cards
 
 
-d1 = Deck()
+# d1 = Deck()
+# print(d1.get_cards(2))
+# d1.shuffle()
+# print(d1.get_cards(2))
+# c1 = Card('2', CARD_SYMBOLS[0])
+# c2 = Card('2', CARD_SYMBOLS[1])
+# # print(c1 == c2)
 
-c1 = Card('2', CARD_SYMBOLS[0])
-c2 = Card('2', CARD_SYMBOLS[1])
-print(c1 == c2)
-print()
 
-
-print(f'Carti in pachet: {len(d1)}')
+# print(f'Carti in pachet: {len(d1)}')
