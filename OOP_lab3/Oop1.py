@@ -66,6 +66,9 @@ class Card:
         # return acelasi tip, dar un obiect nou.
         return self.get_value() + other.get_number()
 
+    def __radd__(self, other) -> int:
+        return other + self.get_value()
+
     def __eq__(self, other) -> int:  # operator overloading
         # Returneaza boolean
         # if self.number == other.number:
