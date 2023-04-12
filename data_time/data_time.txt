@@ -1,0 +1,6 @@
+# Unitate de masura a timpului in python = secunda
+# procesor = milisecunda
+# cum stie laptopul cat e ceasul? => II dam referinta initiala si o baterie referinta care sa tina ceasul pornit.
+# Ciclu procesor unitate de referinta a tot ce se intampla in pc
+# Timpul in pc uri este masurat de quartz si de procesor 
+# Epoc time 1 Ian 1970 Point 0
