@@ -1,11 +1,7 @@
 
 counter = 6
-i = 0
+i = 2
 
 while i != counter:
-    i+=1
+    i += 1
     print('*' * i)
-
-
-
-
