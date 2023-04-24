@@ -1,0 +1,4 @@
+Atribut static metoda statica, metoda de clasa (sinonim)
+
+Ofera un mod de a memora intr-un loc comun pentru toate obiectele clasei, o valoare pe care obiectele o pot instantia.
+Daca modific parametrul clasei static toate obiectele isi vor modifica parametrul. 
