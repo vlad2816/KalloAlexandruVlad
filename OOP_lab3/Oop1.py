@@ -95,9 +95,22 @@ class Deck:
             for number in CARD_VALUE_MAP:
                 # card(valorile din for) cream un object
                 self.__cards.append((Card(number, i)))
+        self.__current_card = len(self.__cards) - 1
 
     def __len__(self):  # return int sau float
         return len(self.__cards)
+
+    def __iter__(self):
+        self.__current_card = len(self.__cards) - 1
+        return self
+
+    def __next__(self):
+        if self.__current_card == -1:
+            raise StopIteration
+        cc = self.__cards[self.__current_card]
+
+        self.__current_card -= 1
+        return cc
 
     def get_cards(self, n) -> List[Card]:
         """Return n cards."""
