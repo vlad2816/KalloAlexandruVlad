@@ -39,3 +39,12 @@ with open(start_time_path / now_file_name, 'w') as fout:  # Fout => File descrip
     fout.write('No Error')
 
 print('file operation done! ')
+
+# Facem un scrip care citeste de la tastatura numele nostru, si cream un fisier in acelasi folder cu scriptul
+# Cream un fisier txt cu inputul
+
+
+# Script -un generator care returneaza numerele lui fibonnaci, apelam next de 100 ori (for)
+# cream fisiere cu numele de la 1 la 100, si in fiecare fisier punem numerele generate de sirul lui fibonacci.
+#
+# Doar cu read sa afisam cand a fost rulat ultima data programul nostru.
