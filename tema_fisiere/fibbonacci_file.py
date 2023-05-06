@@ -1,5 +1,5 @@
 from pathlib import Path
-import time
+
 
 fibo_path = Path(__file__)
 
@@ -15,5 +15,8 @@ def fibo():
 file_place = fibo_path.parent / 'Fibo_Work'
 file_place.mkdir(exist_ok=True, parents=True)
 
-with open(file_place / 'Tema_fibo.txt', 'w') as fout:
-    fout.write('Fibo work')
+for i in range(1, 101):
+    file_number = (f'{i}.txt')
+    with open(file_place / file_number, 'w') as fout:
+        for fibonacci in file_number:
+            fout.write(str(next(fibo())))
