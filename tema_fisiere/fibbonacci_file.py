@@ -1,22 +1,31 @@
 from pathlib import Path
+import sys
 
 
-fibo_path = Path(__file__)
+ROOT = Path(__file__)
 
 
 def fibo():
     a = 0
     b = 1
     while True:
+        yield b
         a, b = b, a + b
-        yield a
 
 
-file_place = fibo_path.parent / 'Fibo_Work'
-file_place.mkdir(exist_ok=True, parents=True)
+# Create output dir
+output_path = ROOT / 'Fibo_Work'
+try:
+    output_path.mkdir(exist_ok=True)
+except OSError:
+    print('Could not create output dir.')
+    sys.exit()
 
+fib_gen = fibo()
 for i in range(1, 101):
-    file_number = (f'{i}.txt')
-    with open(file_place / file_number, 'w') as fout:
-        for fibonacci in file_number:
-            fout.write(str(next(fibo())))
+    file_path = output_path / f'{i}.txt'
+    try:
+        with open(file_path, 'w') as fout:
+            fout.write(str(next(fib_gen)))
+    except OSError as err:
+        print(err)
