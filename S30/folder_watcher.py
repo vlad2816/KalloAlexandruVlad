@@ -4,14 +4,14 @@ import time
 
 
 WATCHED_DIR = Path(
-    "C:/Users/Vlad/Desktop/programare curs/vs code/S30/downloads")
+    "C:\\Users\\Vlad\\Desktop\\programare curs\\vs code\\S30\\downloads")
 TARGET_DIR = Path(
-    "C:/Users/Vlad/Desktop/programare curs/vs code/S30/clean_downloads")
+    "C:\\Users\\Vlad\\Desktop\\programare curs\\vs code\\S30\\clean_downloads")
 
 CATEGORY_MAP = {
     "audio": ["mp3", "wav", "flac"],
     "doc": ["doc", "docx", "xls", "pdf"],
-    "photo": ["jpg", "png", "jpeg"]
+    "photo": ["jpg", "jpeg" "png", "bmp"]
 }
 
 
@@ -22,7 +22,7 @@ def categorize(file_path: Path, category: str):
     file_name = file_path.name
     dst_path = category_dir / file_name
 
-    shutil.move(str(file_path), str(dst_path))  # REVEZI Shutil
+    shutil.copy2(str(file_path), str(dst_path))  # REVEZI Shutil
 
 
 def get_category(path: Path):
@@ -53,4 +53,4 @@ def watch(dir: Path):
             prev_m_time = m_time
 
 
-watch(WATCHED_DIR)
+walk(WATCHED_DIR)
