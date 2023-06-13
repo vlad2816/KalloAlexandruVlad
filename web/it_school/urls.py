@@ -17,11 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from base.views import LandingPage
-from todo.views import ListAll, ViewOne
+
 
 urlpatterns = [
     path('', LandingPage.as_view(), name="landing"),
-    path("todo/", ListAll.as_view(), name="todo-list"),
+    path("todo/", include('todo.urls')),
     path('math/', include('py_math.urls')),
     path('admin/', admin.site.urls),
 ]

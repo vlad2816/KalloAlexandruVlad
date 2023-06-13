@@ -1,3 +1,5 @@
+from typing import Any
+from django.http import HttpRequest, HttpResponse
 from django.views.generic import ListView, DetailView
 from todo.models import Todo
 # Create your views here.
@@ -9,5 +11,5 @@ class ListAll(ListView):
 
 
 class ViewOne(DetailView):
-    template_name = "todo\detail.html"
+    template_name = "todo/detail.html"
     model = Todo

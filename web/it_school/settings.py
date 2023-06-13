@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Own
     'base',
-    'py_math',
-    'todo'
+    'todo',
+    'py_math'
 ]
 
 MIDDLEWARE = [
